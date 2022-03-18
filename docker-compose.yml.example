@@ -1,0 +1,14 @@
+version: "2.4"
+
+services:
+  xmrig-mo:
+    build: github.com/dimtree/docker-xmrig-mo
+    container_name: xmrig-mo
+    tty: true
+    stdin_open: true
+    privileged: true
+    volumes:
+      - /dev:/dev:ro
+      - /lib/modules:/lib/modules:ro
+      - /dev/hugepages:/dev/hugepages:rw
+    command: --url 127.0.0.1:3333 --randomx-1gb-pages
