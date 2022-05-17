@@ -19,7 +19,7 @@ RUN git clone --single-branch --depth 1 https://github.com/MoneroOcean/xmrig ./ 
     mkdir build && \
     cd build && \
     cmake ${XMRIG_BUILD_ARGS} .. && \
-    make -j
+    make
 
 
 FROM alpine:latest
